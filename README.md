@@ -1,3 +1,6 @@
+# NAME:R.LOGA MITHRA
+# REGISTER NUMBER:212223100027
+
 # Experiment--03-Half-Subtractor-and-Full-subtractor
 ## Implementation-of-Half-subtractor-and-Full-subtractor-circuit
 ## AIM:
@@ -43,6 +46,31 @@ Diff = A ⊕ B ⊕ Bin B = A'Bin + A'B + BBin
 Program to design a half subtractor and full subtractor circuit and verify its truth table in quartus using Verilog programming.
 Developed by: R.LOGA MITHRA
 RegisterNumber: 212223100027
+
+HALF SUBTRACTOR:
+module halfsub(a,c,b,d);
+input a,c;
+output d,b;
+wire e;
+xor(d,a,c);
+not(e,a);
+and(b,e,c);
+endmodule
+
+FULL SUBTRACTOR:
+
+module fullsub(A,B,Bin,D,Bout);
+input A,B,Bin;
+output D,Bout;
+wire C,E,F,G,H;
+xor(C,A,B);
+xor(D,C,Bin);
+not(H,C);
+not(E,A);
+and(G,H,Bin);
+and(F,E,B)
+or(Bout,G,F);
+endmodule
 ```
 
 ## Output:
